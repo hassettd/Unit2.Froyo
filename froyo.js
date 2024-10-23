@@ -18,5 +18,25 @@ for (const flavor of flavors) {
 }
 return count;
 }
+
+
+const result = `Your total order is ${flavors}. Thank you!`;
+
+alert(result);
+
+
+
+
 console.log(getflavors(flavors));
+
+function statusCounter(flavors) {
+  let counter = 0;
+  for (const flavor of flavors) {
+    if (flavors.status == 0) counter += 1;
+  }
+  return counter;
+
+}
+
+
 
