@@ -1,17 +1,22 @@
-const arr = ['vanilla','vanilla','vanilla','strawberry','coffee','coffee'];
+const userInputString = prompt(
+    "Please enter some Froyo flavors you would like, separated by commas.",
+    ""
+  );
+  
+  // Split the string of numbers into an array of strings.
+  const flavors = userInputString.split(",");
 
-const count = {};
+function getflavors(flavors) {
+  const count = {};
 
-for (const element of arr) {
-  if (count[element]) {
-    count[element] += 1;
+for (const flavor of flavors) {
+  if (count[flavor]) {
+    count[flavor] += 1;
   } else {
-    count[element] = 1;
+    count[flavor] = 1;
   }
 }
+return count;
+}
+console.log(getflavors(flavors));
 
-console.log(count);
-
-console.log(count.vanilla);
-console.log(count.strawberry);
-console.log(count.coffee);
